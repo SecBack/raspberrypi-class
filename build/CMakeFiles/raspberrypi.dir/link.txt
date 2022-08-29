@@ -1,0 +1,2 @@
+/usr/bin/ar qc libraspberrypi.a CMakeFiles/raspberrypi.dir/raspberrypi.cpp.o
+/usr/bin/ranlib libraspberrypi.a
