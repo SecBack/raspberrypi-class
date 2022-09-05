@@ -5,6 +5,7 @@
 #include "Data.h"
 #include "SenseHat.h"
 
+// global variables, yes, global because of multithreading
 int temperature = 0;
 int humidity = 0;
 int pressure = 0;
@@ -13,12 +14,13 @@ SenseHat senseHat;
 
 using namespace std;
 
+// starts a new thread with the given function
 void Data::SaveToCSVWorker()
 {
-    cout << "before worker---------";
     thread saveToCSVWorker(SaveToCSV);
 }
 
+//saves the vales a csv file
 void Data::SaveToCSV()
 {
     // Create and open a text file

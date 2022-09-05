@@ -7,11 +7,12 @@ using namespace std;
 
 Display::Display()
 {
-    // setting for the display
+    // settings for the display
     senseHat.Effacer();
     senseHat << setcouleur(senseHat.ConvertirRGB565(84, 84, 0)) << setrotation(270);
 }
 
+// given a string, print it to the display
 void Display::DisplayText(string displayText)
 {
     while(1) {
@@ -20,11 +21,9 @@ void Display::DisplayText(string displayText)
     }    
 }
 
+// prints the temperature to the display
 void Display::DisplayTemperature()
 {
-    float x,y,z;
-    int angle;
-
     while(1)
     {
         senseHat << "Temperature: " << temperature << flush;
@@ -32,6 +31,7 @@ void Display::DisplayTemperature()
     }
 }
 
+// prints the humidity to the display
 void Display::DisplayHumidity()
 {
     while(1)
@@ -41,6 +41,7 @@ void Display::DisplayHumidity()
     }
 }
 
+// prints the pressure to the display
 void Display::DisplayPressure()
 {
     while(1)

@@ -31,6 +31,7 @@ void Menu::CreateMenu()
     // use arrow keys
     keypad(menuwin, true);
 
+    // menu options
     string options[4] = 
     {
         " - Write authors name to display",
@@ -54,8 +55,8 @@ void Menu::CreateMenu()
             wattroff(menuwin, A_REVERSE);
         }
         
+        // get the user input
         option = wgetch(menuwin);
-
 
         switch(option) {
             // handle trying to "go out of bounds"
@@ -70,7 +71,7 @@ void Menu::CreateMenu()
                     selected = 0;
                 break;
             case 100: // actual KEY_ENTER not working, using d
-                // if user presses the right execute function depending on the selected option
+                // if user presses the right key, execute function depending on the selected option
                 switch(selected) {
                     // writes my name to the display
                     case 0:

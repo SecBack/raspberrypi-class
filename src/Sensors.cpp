@@ -5,6 +5,7 @@
 
 using namespace std;
 
+// start getting values from the following sensors on a separate thread, to prevent blocking
 void Sensors::Activate()
 {
     thread temperatureThread(StartTemperatureSensor);
@@ -12,6 +13,7 @@ void Sensors::Activate()
     thread pressureThread(StartPressureSensor);
 }
 
+// get temperature sensor value each second and set the global variable
 void Sensors::StartTemperatureSensor()
 {
     while(1)
@@ -21,6 +23,7 @@ void Sensors::StartTemperatureSensor()
     }
 }
 
+// get humidity sensor value each second and set the global variable
 void Sensors::StartHumiditySensor()
 {
     while(1)
@@ -30,6 +33,7 @@ void Sensors::StartHumiditySensor()
     }
 }
 
+// get pressure sensor value each second and set the global variable
 void Sensors::StartPressureSensor()
 {
     while(1)
