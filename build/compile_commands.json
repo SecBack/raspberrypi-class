@@ -1,7 +1,0 @@
-[
-{
-  "directory": "/home/albert/projects/raspberrypi-class/build",
-  "command": "/usr/bin/g++   -g -o CMakeFiles/raspberrypi.dir/raspberrypi.cpp.o -c /home/albert/projects/raspberrypi-class/raspberrypi.cpp",
-  "file": "/home/albert/projects/raspberrypi-class/raspberrypi.cpp"
-}
-]
